@@ -1,0 +1,5 @@
+transformers
+networkx
+nltk
+gunicorn
+uvicorn
