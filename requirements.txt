@@ -1,5 +1,11 @@
-transformers
-networkx
-nltk
-gunicorn
-uvicorn
+fastapi==0.85.0
+networkx==2.8.6
+nltk==3.6.6
+numpy==1.21.5
+pydantic==1.9.0
+torch==1.12.1
+transformers==4.22.2
+uvicorn==0.17.6
+aiofiles==0.6.0
+python-multipart==0.0.5
+jinja2==2.11.2
