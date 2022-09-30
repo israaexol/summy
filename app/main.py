@@ -233,6 +233,12 @@ def root():
 
 if __name__ == '__main__':
     # server api
-    uvicorn.run("main:app", host="0.0.0.0", port=8080,
-                reload=True, debug=True, log_config="log.ini"
+    port = os.environ.get('PORT')
+    if port == None:
+        port = 8080
+    else:
+        port = int(port)
+
+    uvicorn.run("main:app", host="0.0.0.0", port=port,
+                reload=True, debug=True#, log_config="log.ini"
                 )
