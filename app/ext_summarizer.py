@@ -22,6 +22,7 @@ async def read_article_file(file):
 def read_article(text):
     article = text.split(". ")
     sentences = []
+    
     for sentence in article:
       print(sentence)
       sentences.append(sentence.replace("[^a-zA-Z]", " ").split(" "))
