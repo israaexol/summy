@@ -4,7 +4,7 @@ services:
     api:
         build: ./app
         ports: 
-            - $PORT:$PORT
+            - 8080:8080
 
         volumes:
             - ./app:/app
