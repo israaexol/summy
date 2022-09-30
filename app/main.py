@@ -56,7 +56,7 @@ async def startup_event():
     logger.info('PyTorch using device: {}'.format(CONFIG['DEVICE']))
 
     # Initialize the HuggingFace summarization pipeline
-    summarizer = pipeline("summarization")
+    summarizer = pipeline("summarization",model="sshleifer/distilbart-cnn-12-6")
 
     # add model and other preprocess tools too app state
     app.package = {
