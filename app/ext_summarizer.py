@@ -91,7 +91,6 @@ async def generate_summary(text, file, top_n=5):
       summarize_text.append(" ".join(ranked_sentence[i][1]) + ".")
 
     # Step 5 - Offcourse, output the summarize text
-    
     summarized = " ".join(summarize_text)
     
     return(summarized)
