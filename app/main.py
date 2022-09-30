@@ -12,6 +12,7 @@ from fastapi.responses import RedirectResponse, JSONResponse
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+import requests
 
 import torch
 
@@ -46,6 +47,15 @@ app.add_middleware(
 app.add_exception_handler(RequestValidationError, validation_exception_handler)
 app.add_exception_handler(Exception, python_exception_handler)
 
+
+API_URL = "https://api-inference.huggingface.co/models/sshleifer/distilbart-cnn-12-6"
+API_TOKEN = os.environ.get("HF_TOKEN")
+headers = {"Authorization": f"Bearer {API_TOKEN}"}
+
+def query(payload):
+	response = requests.post(API_URL, headers=headers, json=payload)
+	return response.json()
+	
 @app.on_event("startup")
 async def startup_event():
     """
@@ -54,16 +64,90 @@ async def startup_event():
 
     logger.info('Running envirnoment: {}'.format(CONFIG['ENV']))
     logger.info('PyTorch using device: {}'.format(CONFIG['DEVICE']))
+    
+#####################################
+#APIs for abstractive summarization
+@app.post('/summarize_abs',
+          response_model=InferenceResponse,
+          responses={422: {"model": ErrorResponse},
+                     500: {"model": ErrorResponse}}
+          )
+async def summarize_text_abs(request: Request, body: InferenceInput):
+    """
+    Perform an Abstractive text summarization on data provided from text input
+    """
 
-    # Initialize the HuggingFace summarization pipeline
-    summarizer = pipeline("summarization", model="facebook/bart-base")
-    # summarizer.save_pretrained("/")
+    logger.info('API predict called')
+    logger.info(f'input: {body}')
 
-    # add model and other preprocess tools too app state
-    app.package = {
-        "summarizer": summarizer,
+    # prepare input data
+    text = body.text
+    input = {
+        "inputs": text
     }
     
+    res = query(input)
+    logger.info(f'res: {res}')
+    summary = res[0]['summary_text']
+    
+    # if(body.min_length is not None):
+    #     min_length = body.min_length
+    #     summarized = generate_summary()
+
+    # prepare json for returning
+    results = {
+        'summary': summary
+    }
+
+    logger.info(f'results: {results}')
+
+    return {
+        "error": False,
+        "results": results
+    }
+    
+@app.post('/summarize_abs_file',
+          response_model=InferenceResponse,
+          responses={422: {"model": ErrorResponse},
+                     500: {"model": ErrorResponse}}
+          )
+async def summarize_text_abs_file(request: Request, file: UploadFile = File(...)):
+    """
+    Perform an Abstractive text summarization on data provided from file input (.txt)
+    """
+
+    logger.info('API predict called')
+    logger.info(f'file input name: {file.filename}')
+
+    # prepare input data
+    to_tokenize = await file.read()
+    text = to_tokenize.decode("utf-8")
+    input = {
+        "inputs": text
+    }
+    
+    res = query(input)
+    logger.info(f'res: {res}')
+    summary = res[0]['summary_text']
+    
+    # if(body.nb_sentences is not None):
+    #     nb_sentences = body.nb_sentences
+    #     summarized = generate_summary()
+
+    # prepare json for returning
+    results = {
+        'summary': summary
+    }
+
+    logger.info(f'results: {results}')
+
+    return {
+        "error": False,
+        "results": results
+    }
+    
+##############################################
+
 #APIs for extractive summarization
 @app.post('/summarize_ext',
           response_model=InferenceResponse,
@@ -134,79 +218,7 @@ async def summarize_text_ext_file(request: Request, file: UploadFile = File(...)
         "results": results
     }
     
-#####################################
-#APIs for abstractive summarization
-@app.post('/summarize_abs',
-          response_model=InferenceResponse,
-          responses={422: {"model": ErrorResponse},
-                     500: {"model": ErrorResponse}}
-          )
-async def summarize_text_abs(request: Request, body: InferenceInput):
-    """
-    Perform an Abstractive text summarization on data provided from text input
-    """
-
-    logger.info('API predict called')
-    logger.info(f'input: {body}')
-
-    # prepare input data
-    text = body.text
-    res = (await abs_summarize(app.package["summarizer"], text, file=None))[0]                             
-    logger.info(f'res: {res}')
-    summary = res['summary_text']
-    
-    # if(body.min_length is not None):
-    #     min_length = body.min_length
-    #     summarized = generate_summary()
-
-    # prepare json for returning
-    results = {
-        'summary': summary
-    }
-
-    logger.info(f'results: {results}')
-
-    return {
-        "error": False,
-        "results": results
-    }
-    
-@app.post('/summarize_abs_file',
-          response_model=InferenceResponse,
-          responses={422: {"model": ErrorResponse},
-                     500: {"model": ErrorResponse}}
-          )
-async def summarize_text_abs_file(request: Request, file: UploadFile = File(...)):
-    """
-    Perform an Abstractive text summarization on data provided from file input (.txt)
-    """
-
-    logger.info('API predict called')
-    logger.info(f'file input name: {file.filename}')
-
-    # prepare input data
-
-    res = await abs_summarize(app.package["summarizer"], text=None, file=file)                            
-    logger.info(f'res: {res}')
-    summary = res[0]['summary_text']
-    
-    # if(body.nb_sentences is not None):
-    #     nb_sentences = body.nb_sentences
-    #     summarized = generate_summary()
-
-    # prepare json for returning
-    results = {
-        'summary': summary
-    }
-
-    logger.info(f'results: {results}')
-
-    return {
-        "error": False,
-        "results": results
-    }
-    
-##############################################
+#############################################################
 
 @app.get('/about')
 def show_about():

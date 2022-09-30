@@ -2530,3 +2530,242 @@ AttributeError: 'int' object has no attribute 'split'
 [2022-09-30 18:51:18,057] INFO [3696-26544] Running envirnoment: development
 [2022-09-30 18:51:18,060] INFO [3696-26544] PyTorch using device: cpu
 [2022-09-30 18:51:29,085] INFO [3696-26544] Application startup complete.
+[2022-09-30 22:01:54,942] WARNING [19356-2512] WatchGodReload detected file change in '['C:\\Users\\israa\\Desktop\\summy\\app\\main.py']'. Reloading...
+[2022-09-30 22:02:05,597] WARNING [10048-11684] The --reload flag should not be used in production on Windows.
+[2022-09-30 22:02:07,617] INFO [10048-11684] Started server process [10048]
+[2022-09-30 22:02:07,618] INFO [10048-11684] Waiting for application startup.
+[2022-09-30 22:02:07,619] INFO [10048-11684] Running envirnoment: development
+[2022-09-30 22:02:07,619] INFO [10048-11684] PyTorch using device: cpu
+[2022-09-30 22:02:07,620] INFO [10048-11684] Application startup complete.
+[2022-09-30 22:23:01,108] WARNING [19356-2512] WatchGodReload detected file change in '['C:\\Users\\israa\\Desktop\\summy\\app\\main.py']'. Reloading...
+[2022-09-30 22:23:05,363] WARNING [11952-21400] The --reload flag should not be used in production on Windows.
+[2022-09-30 22:23:05,460] INFO [11952-21400] Started server process [11952]
+[2022-09-30 22:23:05,461] INFO [11952-21400] Waiting for application startup.
+[2022-09-30 22:23:05,461] INFO [11952-21400] Running envirnoment: development
+[2022-09-30 22:23:05,462] INFO [11952-21400] PyTorch using device: cpu
+[2022-09-30 22:23:05,462] INFO [11952-21400] Application startup complete.
+[2022-09-30 22:23:19,510] INFO [11952-21400] 127.0.0.1:64040 - "GET /docs HTTP/1.1" 200
+[2022-09-30 22:23:19,756] INFO [11952-21400] 127.0.0.1:64040 - "GET /openapi.json HTTP/1.1" 200
+[2022-09-30 22:23:37,412] INFO [11952-21400] API predict called
+[2022-09-30 22:23:37,419] INFO [11952-21400] input: text='In an attempt to build an AI-ready workforce, Microsoft announced Intelligent Cloud Hub which has been launched to empower the next generation of students with AI-ready skills. Envisioned as a three-year collaborative program, Intelligent Cloud Hub will support around 100 institutions with AI infrastructure, course content and curriculum, developer support, development tools and give students access to cloud and AI services. As part of the program, the Redmond giant which wants to expand its reach and is planning to build a strong developer ecosystem in India with the program will set up the core AI infrastructure and IoT Hub for the selected campuses. The company will provide AI development tools and Azure AI services such as Microsoft Cognitive Services, Bot Services and Azure Machine Learning. According to Manish Prakash, Country General Manager-PS, Health and Education, Microsoft India, said, With AI being the defining technology of our time, it is transforming lives and industry and the jobs of tomorrow will require a different skillset. This will require more collaborations and training and working with AI. That’s why it has become more critical than ever for educational institutions to integrate new cloud and AI technologies. The program is an attempt to ramp up the institutional set-up and build capabilities among the educators to educate the workforce of tomorrow. The program aims to build up the cognitive skills and in-depth understanding of developing intelligent cloud connected solutions for applications across industry. Earlier in April this year, the company announced Microsoft Professional Program In AI as a learning track open to the public. The program was developed to provide job ready skills to programmers who wanted to hone their skills in AI and data science with a series of online courses which featured hands-on labs and expert instructors as well. This program also included developer-focused AI school that provided a bunch of assets to help build AI skills.'
+[2022-09-30 22:23:39,332] ERROR [11952-21400] Request info:
+{
+    "host": "127.0.0.1",
+    "method": "POST",
+    "url": "http://localhost:8080/summarize_abs",
+    "headers": "Headers({'host': 'localhost:8080', 'connection': 'keep-alive', 'content-length': '2032', 'sec-ch-ua': '\"Google Chrome\";v=\"105\", \"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"105\"', 'accept': 'application/json', 'content-type': 'application/json', 'sec-ch-ua-mobile': '?0', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36', 'sec-ch-ua-platform': '\"Windows\"', 'origin': 'http://localhost:8080', 'sec-fetch-site': 'same-origin', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'http://localhost:8080/docs', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7'})",
+    "path_params": "{}",
+    "query_params": "",
+    "cookies": "{}"
+}
+[2022-09-30 22:23:39,357] INFO [11952-21400] 127.0.0.1:64041 - "POST /summarize_abs HTTP/1.1" 500
+[2022-09-30 22:23:39,358] ERROR [11952-21400] Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\israa\anaconda3\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\israa\anaconda3\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\israa\anaconda3\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\israa\anaconda3\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\israa\anaconda3\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\israa\anaconda3\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\israa\anaconda3\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\israa\Desktop\summy\app\main.py", line 99, in summarize_text_abs
+    res = await query(input)
+  File "C:\Users\israa\Desktop\summy\app\main.py", line 56, in query
+    response = await requests.post(API_URL, headers=headers, json=payload)
+TypeError: object Response can't be used in 'await' expression
+[2022-09-30 22:24:07,933] WARNING [19356-2512] WatchGodReload detected file change in '['C:\\Users\\israa\\Desktop\\summy\\app\\main.py']'. Reloading...
+[2022-09-30 22:24:11,879] WARNING [15060-26456] The --reload flag should not be used in production on Windows.
+[2022-09-30 22:24:11,981] INFO [15060-26456] Started server process [15060]
+[2022-09-30 22:24:11,982] INFO [15060-26456] Waiting for application startup.
+[2022-09-30 22:24:11,982] INFO [15060-26456] Running envirnoment: development
+[2022-09-30 22:24:11,983] INFO [15060-26456] PyTorch using device: cpu
+[2022-09-30 22:24:11,983] INFO [15060-26456] Application startup complete.
+[2022-09-30 22:24:16,788] INFO [15060-26456] API predict called
+[2022-09-30 22:24:16,789] INFO [15060-26456] input: text='In an attempt to build an AI-ready workforce, Microsoft announced Intelligent Cloud Hub which has been launched to empower the next generation of students with AI-ready skills. Envisioned as a three-year collaborative program, Intelligent Cloud Hub will support around 100 institutions with AI infrastructure, course content and curriculum, developer support, development tools and give students access to cloud and AI services. As part of the program, the Redmond giant which wants to expand its reach and is planning to build a strong developer ecosystem in India with the program will set up the core AI infrastructure and IoT Hub for the selected campuses. The company will provide AI development tools and Azure AI services such as Microsoft Cognitive Services, Bot Services and Azure Machine Learning. According to Manish Prakash, Country General Manager-PS, Health and Education, Microsoft India, said, With AI being the defining technology of our time, it is transforming lives and industry and the jobs of tomorrow will require a different skillset. This will require more collaborations and training and working with AI. That’s why it has become more critical than ever for educational institutions to integrate new cloud and AI technologies. The program is an attempt to ramp up the institutional set-up and build capabilities among the educators to educate the workforce of tomorrow. The program aims to build up the cognitive skills and in-depth understanding of developing intelligent cloud connected solutions for applications across industry. Earlier in April this year, the company announced Microsoft Professional Program In AI as a learning track open to the public. The program was developed to provide job ready skills to programmers who wanted to hone their skills in AI and data science with a series of online courses which featured hands-on labs and expert instructors as well. This program also included developer-focused AI school that provided a bunch of assets to help build AI skills.'
+[2022-09-30 22:24:23,771] ERROR [15060-26456] Request info:
+{
+    "host": "127.0.0.1",
+    "method": "POST",
+    "url": "http://localhost:8080/summarize_abs",
+    "headers": "Headers({'host': 'localhost:8080', 'connection': 'keep-alive', 'content-length': '2032', 'sec-ch-ua': '\"Google Chrome\";v=\"105\", \"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"105\"', 'accept': 'application/json', 'content-type': 'application/json', 'sec-ch-ua-mobile': '?0', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36', 'sec-ch-ua-platform': '\"Windows\"', 'origin': 'http://localhost:8080', 'sec-fetch-site': 'same-origin', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'http://localhost:8080/docs', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7'})",
+    "path_params": "{}",
+    "query_params": "",
+    "cookies": "{}"
+}
+[2022-09-30 22:24:23,778] INFO [15060-26456] 127.0.0.1:64058 - "POST /summarize_abs HTTP/1.1" 500
+[2022-09-30 22:24:23,779] ERROR [15060-26456] Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\israa\anaconda3\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\israa\anaconda3\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\israa\anaconda3\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\israa\anaconda3\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\israa\anaconda3\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\israa\anaconda3\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\israa\anaconda3\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\israa\Desktop\summy\app\main.py", line 99, in summarize_text_abs
+    res = await query(input)
+TypeError: object dict can't be used in 'await' expression
+[2022-09-30 22:24:40,845] WARNING [19356-2512] WatchGodReload detected file change in '['C:\\Users\\israa\\Desktop\\summy\\app\\main.py']'. Reloading...
+[2022-09-30 22:24:44,836] WARNING [17188-284] The --reload flag should not be used in production on Windows.
+[2022-09-30 22:24:44,941] INFO [17188-284] Started server process [17188]
+[2022-09-30 22:24:44,942] INFO [17188-284] Waiting for application startup.
+[2022-09-30 22:24:44,942] INFO [17188-284] Running envirnoment: development
+[2022-09-30 22:24:44,943] INFO [17188-284] PyTorch using device: cpu
+[2022-09-30 22:24:44,944] INFO [17188-284] Application startup complete.
+[2022-09-30 22:24:47,060] WARNING [19356-2512] WatchGodReload detected file change in '['C:\\Users\\israa\\Desktop\\summy\\app\\main.py']'. Reloading...
+[2022-09-30 22:24:51,258] WARNING [16700-16500] The --reload flag should not be used in production on Windows.
+[2022-09-30 22:24:51,352] INFO [16700-16500] Started server process [16700]
+[2022-09-30 22:24:51,353] INFO [16700-16500] Waiting for application startup.
+[2022-09-30 22:24:51,354] INFO [16700-16500] Running envirnoment: development
+[2022-09-30 22:24:51,355] INFO [16700-16500] PyTorch using device: cpu
+[2022-09-30 22:24:51,355] INFO [16700-16500] Application startup complete.
+[2022-09-30 22:24:56,789] INFO [16700-16500] API predict called
+[2022-09-30 22:24:56,790] INFO [16700-16500] input: text='In an attempt to build an AI-ready workforce, Microsoft announced Intelligent Cloud Hub which has been launched to empower the next generation of students with AI-ready skills. Envisioned as a three-year collaborative program, Intelligent Cloud Hub will support around 100 institutions with AI infrastructure, course content and curriculum, developer support, development tools and give students access to cloud and AI services. As part of the program, the Redmond giant which wants to expand its reach and is planning to build a strong developer ecosystem in India with the program will set up the core AI infrastructure and IoT Hub for the selected campuses. The company will provide AI development tools and Azure AI services such as Microsoft Cognitive Services, Bot Services and Azure Machine Learning. According to Manish Prakash, Country General Manager-PS, Health and Education, Microsoft India, said, With AI being the defining technology of our time, it is transforming lives and industry and the jobs of tomorrow will require a different skillset. This will require more collaborations and training and working with AI. That’s why it has become more critical than ever for educational institutions to integrate new cloud and AI technologies. The program is an attempt to ramp up the institutional set-up and build capabilities among the educators to educate the workforce of tomorrow. The program aims to build up the cognitive skills and in-depth understanding of developing intelligent cloud connected solutions for applications across industry. Earlier in April this year, the company announced Microsoft Professional Program In AI as a learning track open to the public. The program was developed to provide job ready skills to programmers who wanted to hone their skills in AI and data science with a series of online courses which featured hands-on labs and expert instructors as well. This program also included developer-focused AI school that provided a bunch of assets to help build AI skills.'
+[2022-09-30 22:24:59,186] INFO [16700-16500] res: {'error': 'Internal Server Error'}
+[2022-09-30 22:24:59,188] ERROR [16700-16500] Request info:
+{
+    "host": "127.0.0.1",
+    "method": "POST",
+    "url": "http://localhost:8080/summarize_abs",
+    "headers": "Headers({'host': 'localhost:8080', 'connection': 'keep-alive', 'content-length': '2032', 'sec-ch-ua': '\"Google Chrome\";v=\"105\", \"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"105\"', 'accept': 'application/json', 'content-type': 'application/json', 'sec-ch-ua-mobile': '?0', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36', 'sec-ch-ua-platform': '\"Windows\"', 'origin': 'http://localhost:8080', 'sec-fetch-site': 'same-origin', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'http://localhost:8080/docs', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'en-US,en;q=0.9,fr-FR;q=0.8,fr;q=0.7'})",
+    "path_params": "{}",
+    "query_params": "",
+    "cookies": "{}"
+}
+[2022-09-30 22:24:59,207] INFO [16700-16500] 127.0.0.1:64072 - "POST /summarize_abs HTTP/1.1" 500
+[2022-09-30 22:24:59,209] ERROR [16700-16500] Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\israa\anaconda3\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\israa\anaconda3\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\israa\anaconda3\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\israa\anaconda3\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\israa\anaconda3\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\israa\anaconda3\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\israa\anaconda3\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\israa\anaconda3\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\israa\Desktop\summy\app\main.py", line 101, in summarize_text_abs
+    summary = res['summary_text']
+KeyError: 'summary_text'
+[2022-09-30 22:26:23,024] WARNING [19356-2512] WatchGodReload detected file change in '['C:\\Users\\israa\\Desktop\\summy\\app\\main.py']'. Reloading...
+[2022-09-30 22:26:27,582] WARNING [1716-5380] The --reload flag should not be used in production on Windows.
+[2022-09-30 22:26:27,672] INFO [1716-5380] Started server process [1716]
+[2022-09-30 22:26:27,673] INFO [1716-5380] Waiting for application startup.
+[2022-09-30 22:26:27,673] INFO [1716-5380] Running envirnoment: development
+[2022-09-30 22:26:27,674] INFO [1716-5380] PyTorch using device: cpu
+[2022-09-30 22:26:27,674] INFO [1716-5380] Application startup complete.
+[2022-09-30 22:26:51,224] WARNING [19356-2512] WatchGodReload detected file change in '['C:\\Users\\israa\\Desktop\\summy\\app\\main.py']'. Reloading...
+[2022-09-30 22:26:55,408] WARNING [21368-16640] The --reload flag should not be used in production on Windows.
+[2022-09-30 22:26:55,513] INFO [21368-16640] Started server process [21368]
+[2022-09-30 22:26:55,514] INFO [21368-16640] Waiting for application startup.
+[2022-09-30 22:26:55,515] INFO [21368-16640] Running envirnoment: development
+[2022-09-30 22:26:55,515] INFO [21368-16640] PyTorch using device: cpu
+[2022-09-30 22:26:55,516] INFO [21368-16640] Application startup complete.
+[2022-09-30 22:27:01,767] INFO [21368-16640] API predict called
+[2022-09-30 22:27:01,768] INFO [21368-16640] input: text='In an attempt to build an AI-ready workforce, Microsoft announced Intelligent Cloud Hub which has been launched to empower the next generation of students with AI-ready skills. Envisioned as a three-year collaborative program, Intelligent Cloud Hub will support around 100 institutions with AI infrastructure, course content and curriculum, developer support, development tools and give students access to cloud and AI services. As part of the program, the Redmond giant which wants to expand its reach and is planning to build a strong developer ecosystem in India with the program will set up the core AI infrastructure and IoT Hub for the selected campuses. The company will provide AI development tools and Azure AI services such as Microsoft Cognitive Services, Bot Services and Azure Machine Learning. According to Manish Prakash, Country General Manager-PS, Health and Education, Microsoft India, said, With AI being the defining technology of our time, it is transforming lives and industry and the jobs of tomorrow will require a different skillset. This will require more collaborations and training and working with AI. That’s why it has become more critical than ever for educational institutions to integrate new cloud and AI technologies. The program is an attempt to ramp up the institutional set-up and build capabilities among the educators to educate the workforce of tomorrow. The program aims to build up the cognitive skills and in-depth understanding of developing intelligent cloud connected solutions for applications across industry. Earlier in April this year, the company announced Microsoft Professional Program In AI as a learning track open to the public. The program was developed to provide job ready skills to programmers who wanted to hone their skills in AI and data science with a series of online courses which featured hands-on labs and expert instructors as well. This program also included developer-focused AI school that provided a bunch of assets to help build AI skills.'
+[2022-09-30 22:27:08,527] INFO [21368-16640] res: [{'summary_text': ' Microsoft announced Intelligent Cloud Hub which has been launched to empower the next generation of students with AI-ready skills . Envisioned as a three-year collaborative program, the program will support around 100 institutions with AI infrastructure, course content and curriculum, developer support, development tools and access to cloud and AI services . The program aims to build up the cognitive skills and in-depth understanding of developing intelligent cloud connected solutions .'}]
+[2022-09-30 22:27:08,529] INFO [21368-16640] results: {'summary': ' Microsoft announced Intelligent Cloud Hub which has been launched to empower the next generation of students with AI-ready skills . Envisioned as a three-year collaborative program, the program will support around 100 institutions with AI infrastructure, course content and curriculum, developer support, development tools and access to cloud and AI services . The program aims to build up the cognitive skills and in-depth understanding of developing intelligent cloud connected solutions .'}
+[2022-09-30 22:27:08,532] INFO [21368-16640] 127.0.0.1:64111 - "POST /summarize_abs HTTP/1.1" 200
