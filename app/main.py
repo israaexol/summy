@@ -56,8 +56,9 @@ async def startup_event():
     logger.info('PyTorch using device: {}'.format(CONFIG['DEVICE']))
 
     # Initialize the HuggingFace summarization pipeline
-    summarizer = pipeline("summarization")
-
+    # summarizer = pipeline("summarization")
+    # summarizer.save_pretrained("/")
+    summarizer = pipeline("summarization", model = "/")
     # add model and other preprocess tools too app state
     app.package = {
         "summarizer": summarizer,

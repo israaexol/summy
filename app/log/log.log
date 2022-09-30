@@ -2455,3 +2455,29 @@ AttributeError: 'int' object has no attribute 'split'
 [2022-09-29 17:12:23,149] INFO [10200-25260] Running envirnoment: development
 [2022-09-29 17:12:23,149] INFO [10200-25260] PyTorch using device: cpu
 [2022-09-29 17:12:35,088] INFO [10200-25260] Application startup complete.
+[2022-09-30 14:49:38,548] INFO [10348-19948] Will watch for changes in these directories: ['C:\\Users\\israa\\Desktop\\summy\\app']
+[2022-09-30 14:49:38,549] INFO [10348-19948] Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+[2022-09-30 14:49:38,553] INFO [10348-19948] Started reloader process [10348] using watchgod
+[2022-09-30 14:49:42,764] WARNING [4468-23456] The --reload flag should not be used in production on Windows.
+[2022-09-30 14:49:42,898] INFO [4468-23456] Started server process [4468]
+[2022-09-30 14:49:42,899] INFO [4468-23456] Waiting for application startup.
+[2022-09-30 14:49:42,900] INFO [4468-23456] Running envirnoment: development
+[2022-09-30 14:49:42,901] INFO [4468-23456] PyTorch using device: cpu
+[2022-09-30 14:50:00,765] INFO [4468-23456] Application startup complete.
+[2022-09-30 14:50:51,018] INFO [7836-11128] Will watch for changes in these directories: ['C:\\Users\\israa\\Desktop\\summy\\app']
+[2022-09-30 14:50:51,019] INFO [7836-11128] Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+[2022-09-30 14:50:51,023] INFO [7836-11128] Started reloader process [7836] using watchgod
+[2022-09-30 14:50:55,173] WARNING [4952-26004] The --reload flag should not be used in production on Windows.
+[2022-09-30 14:50:55,288] INFO [4952-26004] Started server process [4952]
+[2022-09-30 14:50:55,289] INFO [4952-26004] Waiting for application startup.
+[2022-09-30 14:50:55,290] INFO [4952-26004] Running envirnoment: development
+[2022-09-30 14:50:55,290] INFO [4952-26004] PyTorch using device: cpu
+[2022-09-30 14:50:58,880] INFO [4952-26004] Application startup complete.
+[2022-09-30 14:51:13,042] INFO [4952-26004] 127.0.0.1:56855 - "GET /docs HTTP/1.1" 200
+[2022-09-30 14:51:13,820] INFO [4952-26004] 127.0.0.1:56855 - "GET /openapi.json HTTP/1.1" 200
+[2022-09-30 14:51:53,138] INFO [4952-26004] API predict called
+[2022-09-30 14:51:53,145] INFO [4952-26004] input: text='In an attempt to build an AI-ready workforce, Microsoft announced Intelligent Cloud Hub which has been launched to empower the next generation of students with AI-ready skills. Envisioned as a three-year collaborative program, Intelligent Cloud Hub will support around 100 institutions with AI infrastructure, course content and curriculum, developer support, development tools and give students access to cloud and AI services. As part of the program, the Redmond giant which wants to expand its reach and is planning to build a strong developer ecosystem in India with the program will set up the core AI infrastructure and IoT Hub for the selected campuses. The company will provide AI development tools and Azure AI services such as Microsoft Cognitive Services, Bot Services and Azure Machine Learning. According to Manish Prakash, Country General Manager-PS, Health and Education, Microsoft India, said, With AI being the defining technology of our time, it is transforming lives and industry and the jobs of tomorrow will require a different skillset. This will require more collaborations and training and working with AI. That’s why it has become more critical than ever for educational institutions to integrate new cloud and AI technologies. The program is an attempt to ramp up the institutional set-up and build capabilities among the educators to educate the workforce of tomorrow. The program aims to build up the cognitive skills and in-depth understanding of developing intelligent cloud connected solutions for applications across industry. Earlier in April this year, the company announced Microsoft Professional Program In AI as a learning track open to the public. The program was developed to provide job ready skills to programmers who wanted to hone their skills in AI and data science with a series of online courses which featured hands-on labs and expert instructors as well. This program also included developer-focused AI school that provided a bunch of assets to help build AI skills.'
+[2022-09-30 14:52:01,264] INFO [4952-26004] res: {'summary_text': ' Microsoft announced Intelligent Cloud Hub which has been launched to empower the next generation of students with AI-ready skills . Envisioned as a three-year collaborative program, the program will support around 100 institutions with AI infrastructure, course content and curriculum, developer support, development tools and access to cloud and AI services . The program aims to build up the cognitive skills and in-depth understanding of developing intelligent cloud connected solutions for applications across industry .'}
+[2022-09-30 14:52:01,265] INFO [4952-26004] results: {'summary': ' Microsoft announced Intelligent Cloud Hub which has been launched to empower the next generation of students with AI-ready skills . Envisioned as a three-year collaborative program, the program will support around 100 institutions with AI infrastructure, course content and curriculum, developer support, development tools and access to cloud and AI services . The program aims to build up the cognitive skills and in-depth understanding of developing intelligent cloud connected solutions for applications across industry .'}
+[2022-09-30 14:52:01,266] INFO [4952-26004] 127.0.0.1:56856 - "POST /summarize_abs HTTP/1.1" 200
+[2022-09-30 14:52:53,153] WARNING [7836-11128] WatchGodReload detected file change in '['C:\\Users\\israa\\Desktop\\summy\\app\\summyapi\\main.py']'. Reloading...
