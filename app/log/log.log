@@ -2503,3 +2503,30 @@ AttributeError: 'int' object has no attribute 'split'
 [2022-09-30 18:46:54,007] INFO [23428-24392] Running envirnoment: development
 [2022-09-30 18:46:54,007] INFO [23428-24392] PyTorch using device: cpu
 [2022-09-30 18:47:05,531] WARNING [19356-2512] WatchGodReload detected file change in '['C:\\Users\\israa\\Desktop\\summy\\app\\main.py']'. Reloading...
+[2022-09-30 18:47:09,574] WARNING [24992-22732] The --reload flag should not be used in production on Windows.
+[2022-09-30 18:47:09,681] INFO [24992-22732] Started server process [24992]
+[2022-09-30 18:47:09,681] INFO [24992-22732] Waiting for application startup.
+[2022-09-30 18:47:09,682] INFO [24992-22732] Running envirnoment: development
+[2022-09-30 18:47:09,682] INFO [24992-22732] PyTorch using device: cpu
+[2022-09-30 18:47:20,022] INFO [24992-22732] Application startup complete.
+[2022-09-30 18:50:06,551] WARNING [19356-2512] WatchGodReload detected file change in '['C:\\Users\\israa\\Desktop\\summy\\app\\main.py']'. Reloading...
+[2022-09-30 18:50:31,870] WARNING [19356-2512] WatchGodReload detected file change in '['C:\\Users\\israa\\Desktop\\summy\\app\\main.py']'. Reloading...
+[2022-09-30 18:50:36,065] WARNING [21396-24372] The --reload flag should not be used in production on Windows.
+[2022-09-30 18:50:36,170] INFO [21396-24372] Started server process [21396]
+[2022-09-30 18:50:36,170] INFO [21396-24372] Waiting for application startup.
+[2022-09-30 18:50:36,171] INFO [21396-24372] Running envirnoment: development
+[2022-09-30 18:50:36,171] INFO [21396-24372] PyTorch using device: cpu
+[2022-09-30 18:50:44,685] WARNING [19356-2512] WatchGodReload detected file change in '['C:\\Users\\israa\\Desktop\\summy\\app\\main.py']'. Reloading...
+[2022-09-30 18:50:50,742] WARNING [22072-25048] The --reload flag should not be used in production on Windows.
+[2022-09-30 18:50:50,856] INFO [22072-25048] Started server process [22072]
+[2022-09-30 18:50:50,857] INFO [22072-25048] Waiting for application startup.
+[2022-09-30 18:50:50,858] INFO [22072-25048] Running envirnoment: development
+[2022-09-30 18:50:50,858] INFO [22072-25048] PyTorch using device: cpu
+[2022-09-30 18:51:01,991] INFO [22072-25048] Application startup complete.
+[2022-09-30 18:51:13,772] WARNING [19356-2512] WatchGodReload detected file change in '['C:\\Users\\israa\\Desktop\\summy\\app\\main.py']'. Reloading...
+[2022-09-30 18:51:17,938] WARNING [3696-26544] The --reload flag should not be used in production on Windows.
+[2022-09-30 18:51:18,047] INFO [3696-26544] Started server process [3696]
+[2022-09-30 18:51:18,053] INFO [3696-26544] Waiting for application startup.
+[2022-09-30 18:51:18,057] INFO [3696-26544] Running envirnoment: development
+[2022-09-30 18:51:18,060] INFO [3696-26544] PyTorch using device: cpu
+[2022-09-30 18:51:29,085] INFO [3696-26544] Application startup complete.
