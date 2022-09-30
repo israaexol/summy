@@ -2497,3 +2497,9 @@ AttributeError: 'int' object has no attribute 'split'
 [2022-09-30 17:33:28,366] INFO [512-15376] PyTorch using device: cpu
 [2022-09-30 17:40:39,844] INFO [512-15376] Application startup complete.
 [2022-09-30 18:46:48,488] WARNING [19356-2512] WatchGodReload detected file change in '['C:\\Users\\israa\\Desktop\\summy\\app\\main.py']'. Reloading...
+[2022-09-30 18:46:53,863] WARNING [23428-24392] The --reload flag should not be used in production on Windows.
+[2022-09-30 18:46:54,006] INFO [23428-24392] Started server process [23428]
+[2022-09-30 18:46:54,006] INFO [23428-24392] Waiting for application startup.
+[2022-09-30 18:46:54,007] INFO [23428-24392] Running envirnoment: development
+[2022-09-30 18:46:54,007] INFO [23428-24392] PyTorch using device: cpu
+[2022-09-30 18:47:05,531] WARNING [19356-2512] WatchGodReload detected file change in '['C:\\Users\\israa\\Desktop\\summy\\app\\main.py']'. Reloading...
