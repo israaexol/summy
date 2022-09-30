@@ -2481,3 +2481,9 @@ AttributeError: 'int' object has no attribute 'split'
 [2022-09-30 14:52:01,265] INFO [4952-26004] results: {'summary': ' Microsoft announced Intelligent Cloud Hub which has been launched to empower the next generation of students with AI-ready skills . Envisioned as a three-year collaborative program, the program will support around 100 institutions with AI infrastructure, course content and curriculum, developer support, development tools and access to cloud and AI services . The program aims to build up the cognitive skills and in-depth understanding of developing intelligent cloud connected solutions for applications across industry .'}
 [2022-09-30 14:52:01,266] INFO [4952-26004] 127.0.0.1:56856 - "POST /summarize_abs HTTP/1.1" 200
 [2022-09-30 14:52:53,153] WARNING [7836-11128] WatchGodReload detected file change in '['C:\\Users\\israa\\Desktop\\summy\\app\\summyapi\\main.py']'. Reloading...
+[2022-09-30 14:52:57,317] WARNING [6756-21892] The --reload flag should not be used in production on Windows.
+[2022-09-30 14:52:57,442] INFO [6756-21892] Started server process [6756]
+[2022-09-30 14:52:57,443] INFO [6756-21892] Waiting for application startup.
+[2022-09-30 14:52:57,444] INFO [6756-21892] Running envirnoment: development
+[2022-09-30 14:52:57,444] INFO [6756-21892] PyTorch using device: cpu
+[2022-09-30 14:53:00,627] INFO [6756-21892] Application startup complete.
