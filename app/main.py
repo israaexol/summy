@@ -58,7 +58,7 @@ async def startup_event():
     # Initialize the HuggingFace summarization pipeline
     summarizer = pipeline("summarization", model="facebook/bart-base")
     summarizer.save_pretrained("/")
-    # summarizer = pipeline("summarization", model = "/")
+
     # add model and other preprocess tools too app state
     app.package = {
         "summarizer": summarizer,

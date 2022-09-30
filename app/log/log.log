@@ -2487,3 +2487,13 @@ AttributeError: 'int' object has no attribute 'split'
 [2022-09-30 14:52:57,444] INFO [6756-21892] Running envirnoment: development
 [2022-09-30 14:52:57,444] INFO [6756-21892] PyTorch using device: cpu
 [2022-09-30 14:53:00,627] INFO [6756-21892] Application startup complete.
+[2022-09-30 17:33:22,749] INFO [19356-2512] Will watch for changes in these directories: ['C:\\Users\\israa\\Desktop\\summy\\app']
+[2022-09-30 17:33:22,749] INFO [19356-2512] Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+[2022-09-30 17:33:22,752] INFO [19356-2512] Started reloader process [19356] using watchgod
+[2022-09-30 17:33:28,262] WARNING [512-15376] The --reload flag should not be used in production on Windows.
+[2022-09-30 17:33:28,365] INFO [512-15376] Started server process [512]
+[2022-09-30 17:33:28,365] INFO [512-15376] Waiting for application startup.
+[2022-09-30 17:33:28,366] INFO [512-15376] Running envirnoment: development
+[2022-09-30 17:33:28,366] INFO [512-15376] PyTorch using device: cpu
+[2022-09-30 17:40:39,844] INFO [512-15376] Application startup complete.
+[2022-09-30 18:46:48,488] WARNING [19356-2512] WatchGodReload detected file change in '['C:\\Users\\israa\\Desktop\\summy\\app\\main.py']'. Reloading...
